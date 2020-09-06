@@ -30,3 +30,12 @@ The Atollic True studio environment for this project uses `startup_stm32f10x_md.
   */                  
 ```
 Among this a function `SystemInit` is called, located in `system_stm32f10x.c`. This function is responsible for clock configuration. Since a proper clock startup and configuration has been acchieved by the same function while bootloader started it is not necessary to call it. Moreover calling it while clock is already configured breaks the connfiguration in this case. In order to avoid those problems the fucntion call ine the assembler file should be connemented out.
+
+### Result
+After those changes the project compiles and runs smoothly after the bootloader gives control to it. The result, as seen in the console, of the two programs runnig should look like this:
+``
+Bootloader: Start
+Bootloader: Handing over to main app... 
+
+Main App: Start
+``
