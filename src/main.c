@@ -8,7 +8,7 @@ void hw_init(void);
 
 int main(void) {
 	// Init hardware, i.e the serial port in order to send debug messages.
-	//hw_init();
+	hw_init();
 	printf("\r\nMain App: Start\r\n");
 
 	/* Infinite loop */
